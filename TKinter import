@@ -1,0 +1,35 @@
+
+from tkinter import *
+Root = Tk()
+Root.geometry("200x300") #geometria della finestra
+#la struttura della chiamata è variabile = funzione (master,option)
+#in caso debba associare un testo
+label1 = Label(Root,text ="ciao,benvenuto!")#testo da associare
+label1.pack()
+
+#in caso dovessi associare un pulsante
+btn = Button(Root,text = "premimi" ) 
+btn.pack() 
+
+
+#in caso stessi lavorando con una spunta:
+
+Checkbutton1 = IntVar(0)
+Checkbutton2 = IntVar(0)
+Checkbutton3 = IntVar(0)
+
+Button1 = Checkbutton1(Root,text = "mi ritengo uomo", 
+                    variable = Checkbutton1,
+                    onvalue = 1,
+                    offvalue = 0,
+                    height = 2,
+                    width = 10)
+Button2 = Checkbutton2(Root,text = "mi ritengo donna" ,
+                    variable = Checkbutton2,
+                    onvalue = 1,
+                    offvalue = 0,
+                    height = 2,
+                    width = 10) 
+
+Root.mainloop()
+
